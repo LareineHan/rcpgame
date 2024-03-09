@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './App.css';
+import Container from 'react-bootstrap/Container';
 import Box from './component/Box';
 import Rules from './component/Rules';
 import rock from './img/rock-w.png';
@@ -77,37 +78,44 @@ function App() {
 	};
 
 	return (
-		<div>
-			<h1 className='rsp-title'>
-				Rock Scissors Paper
-				<div className='restart'>
-					<button className='restart-btn' onClick={() => restartGame()}>
-						<img src={rspgame} alt='rspgame' />
-					</button>
+		<div className='App'>
+			<Container>
+				<div className='App-header'>
+					<h1 className='rsp-title'>
+						<p>Rock Scissors Paper</p>
+						<div className='restart'>
+							<button className='restart-btn' onClick={() => restartGame()}>
+								<img src={rspgame} alt='rspgame' />
+							</button>
+						</div>
+					</h1>
 				</div>
-			</h1>
-
-			<div className='default-screen'>
-				<Rules />
-			</div>
-			<div className='main box-container' id='screen'>
-				<Box title='You' item={userSelect} result={result} />
-				<Box title='Computer' item={computerSelect} result={result} />
-			</div>
-
-			<div className='main btn-container'>
-				<button className='rsp-btn' onClick={() => play('rock')}>
-					<img src={rockbtn} alt='rock' />
-				</button>
-				<button className='rsp-btn' onClick={() => play('scissors')}>
-					{' '}
-					<img src={scissorsbtn} alt='rock' />
-				</button>
-				<button className='rsp-btn' onClick={() => play('paper')}>
-					{' '}
-					<img src={paperbtn} alt='rock' />
-				</button>
-			</div>
+				<div className='default-screen'>
+					<Rules />
+				</div>
+				<div className='App-middle'>
+					<div className='box-container' id='screen'>
+						<Box title='You' item={userSelect} result={result} />
+						<Box title='Computer' item={computerSelect} result={result} />
+					</div>
+				</div>
+				<div className='App-bottom'>
+					<div className='btn-container'>
+						<button className='rsp-btn' onClick={() => play('rock')}>
+							<img src={rockbtn} alt='rock' />
+						</button>
+						<button className='rsp-btn' onClick={() => play('scissors')}>
+							{' '}
+							<img src={scissorsbtn} alt='rock' />
+						</button>
+						<button className='rsp-btn' onClick={() => play('paper')}>
+							{' '}
+							<img src={paperbtn} alt='rock' />
+						</button>
+					</div>
+					<div className='info'>Your go to RSP game</div>
+				</div>
+			</Container>
 		</div>
 	);
 }
