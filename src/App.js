@@ -30,8 +30,6 @@ function App() {
 	const [computerSelect, setComputerSelect] = useState(null);
 	const [result, setResult] = useState('');
 
-	// const gameScreen = document.getElementById('screen');
-	// gameScreen.style.display = 'none';
 	const startGame = () => {
 		const gameScreen = document.getElementById('screen');
 		gameScreen.classList.add('show');
@@ -91,7 +89,6 @@ function App() {
 
 			<div className='default-screen'>
 				<Rules />
-				{/* <img className='eyeball' src={eyeball} alt='eyeball' /> */}
 			</div>
 			<div className='main box-container' id='screen'>
 				<Box title='You' item={userSelect} result={result} />

@@ -1,4 +1,5 @@
 import React from 'react';
+import '../css/Box.css';
 
 const Box = (props) => {
 	let result;
