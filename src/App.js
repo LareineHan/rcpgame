@@ -9,12 +9,6 @@ import rockbtn from './img/rock-dk.png';
 import scissorsbtn from './img/scissors-dk.png';
 import paperbtn from './img/paper-dk.png';
 import rspgame from './img/rspgame.png';
-//1. 2 boxes with title, image and results ✅
-//2. buttons for rock scissors and paper ✅
-//3. when user click, the result will be shown in the box
-//4. computer gets random choice
-//5. compare 3 & 4 to get winner and loser
-//6. based on w/l, update the result box with border colors
 
 const choice = {
 	rock: {

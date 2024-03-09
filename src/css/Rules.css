@@ -26,6 +26,10 @@ li {
 }
 
 @media screen and (max-width: 1000px) {
+    body {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
     h2 {
         font-size: 1.3em;
     }
