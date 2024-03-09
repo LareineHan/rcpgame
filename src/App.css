@@ -130,7 +130,12 @@ div {
 
 
 /* Responsive design */
-
+@media screen and (max-width: 1000) {
+    body {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+}
 @media screen and (max-width: 700) {
     .default-screen {
         margin-bottom: 0;
