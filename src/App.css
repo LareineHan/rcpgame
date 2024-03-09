@@ -1,38 +1,197 @@
-.App {
-  text-align: center;
+body {
+    background-color: #549ad3;
+}
+div {
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 0;
+}
+.rsp-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3em;
+    color: #eeeeee;
+    text-align: center;
+}
+#screen {
+    display: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#screen.show {
+    display: flex;
+}
+.default-screen.hide {
+    display: none;
+}
+.default-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0rem
+}
+.restart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.restart button {
+    background-color: transparent;
+    border: none;
+}
+.restart button img {
+    max-width:6%;
+    max-height: 6%;
+    cursor: pointer;
+}
+.main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(252, 246, 237);
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin-left: 50px;
+    margin-right: 50px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.rsp-img {
+    display: block;
+    max-width: 30%;
+    max-height: 37%;
+    /* max-width:73px;
+    max-height:100px; */
+    width: auto;
+    height: auto;
+}
+.player  {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3em;
+    margin:20px;
+}
+.result-text {
+    font-family: 'Roboto', sans-serif;
+    font-size:1.4em;
+    margin:20px;
+}
+.win {
+    background-color: #02cf7d ;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.lose {
+    background-color: #ff5f5f ;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.draw {
+    background-color: #577c99 ;
+}
+.btn-container {
+    padding-bottom: 2rem;
+}
+.rsp-btn {
+    max-width: 3rem;
+    max-height: 3rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.rsp-btn:hover {
+    transform: scale(1.1);
+}
+.rsp-btn img {
+    max-width: 100%;
+    max-height: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.main.btn-container {
+    position: relative;
+    padding-top: 6%;
+    padding-bottom: 10%;
+    width: 100%;
+    height: 20px;
 }
+/* .main.btn-container {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+} */
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Responsive design */
+
+@media screen and (max-width: 700) {
+    .default-screen {
+        margin-bottom: 0;
+        margin-right: 2rem;
+        margin-left: 2rem;
+    }
+    .rsp-title {
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.8em;
+        color: #eeeeee;
+        text-align: center;
+        padding-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    .restart button img {
+        margin-top:10px;
+        max-width: 10%;
+        max-height: 10%;
+        padding-top: 1rem;
+        margin-bottom: 0;
+        cursor: pointer;
+    }
+    .box {
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 0;
+        width: 150px;
+        height: 250px;
+        border-radius: 0;  
+    }
+    .player  {
+        margin:10px;
+    }
+    .rsp-img {
+        display: block;
+        max-width: 50px;
+        max-height: 70px;
+    }
+    .win {
+        border-bottom: solid 10px rgb(1, 137, 101) ;
+        background-color: transparent;
+    }
+    .lose {
+        border-bottom: solid 10px rgb(248, 158, 49) ;
+        background-color: transparent;
+    }
+    .draw {
+        border-bottom: solid 10px rgb(56, 56, 56) ;
+        background-color: transparent;
+    }
+    .player{
+        font-size: 18px;
+    }
+    .result-text {
+        font-family:'Courier New', Courier, monospace;
+        font-size:1em;
+    }
+    .main.btn-container {
+        position: relative;
+        padding-bottom: 5%;
+        width: 100%;
+        height: 150px;
+    }
 }
