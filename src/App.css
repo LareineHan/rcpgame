@@ -102,7 +102,7 @@ body {
 }
 .App-bottom {
     display: grid;
-    padding-top: 2rem;
+    /* padding-top: 2rem; */
 }
 .App-bottom div {
     display: flex;
@@ -110,7 +110,7 @@ body {
     align-items: center;
 }
 .btn-container {
-    padding-top: 6%;
+    padding-top: 0;
 }
 .rsp-btn {
     max-width: 4rem;
